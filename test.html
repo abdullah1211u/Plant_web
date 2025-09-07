@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .header-green {
+            background-color: #22543d; /* A dark green shade */
+        }
+        .hero-section, .impact-section {
+             background-color: #f0fff4; /* A very light green */
+        }
+        .plant-tree-section {
+            background-color: #22543d; /* A dark green shade */
+        }
+        .btn-primary {
+            background-color: #f6e05e; /* A warm yellow */
+            color: #2d3748;
+            font-weight: 600;
+        }
+        .btn-secondary {
+            background-color: #48bb78; /* A vibrant green */
+            color: white;
+            font-weight: 600;
+        }
+        .category-tag {
+            border: 1px solid #48bb78;
+            color: #48bb78;
+            background-color: #f0fff4;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="header-green text-white p-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-300" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M15.402 4.4a8.003 8.003 0 00-12.804 8.195c.344.654.516 1.37.516 2.105v.199c0 .736.172 1.451.516 2.105a8.003 8.003 0 0011.272 1.205 8.003 8.003 0 001.205-11.272A8.023 8.023 0 0015.402 4.4zM9 13a1 1 0 112 0v2a1 1 0 11-2 0v-2zm1-8a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                </svg>
+                <h1 class="text-2xl font-bold">Green Earth</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <button class="btn-primary px-4 py-2 rounded-full hidden sm:block">Plant a Tree</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <!-- Hero Section -->
+        <section class="hero-section text-center p-8 rounded-2xl mb-8">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2">Plant a Tree, Grow a Future</h2>
+            <p class="text-gray-600 mb-6">Join us in our mission to make the world a greener place.</p>
+            <button class="btn-primary px-6 py-3 rounded-full">Get Involved</button>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Categories</h3>
+            <div id="categories" class="flex flex-wrap justify-center gap-4 text-center">
+                <!-- Categories will be injected here by JS -->
+            </div>
+        </section>
+        
+        <!-- Products Section -->
+        <section id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Product cards will be injected here by JS -->
+        </section>
+        
+        <!-- Cart Section -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm mb-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Your Cart</h3>
+            <div id="cart-items" class="space-y-4">
+                <p class="text-gray-500">Your cart is empty.</p>
+            </div>
+            <div id="cart-total" class="mt-6 text-right font-bold text-xl text-gray-800 border-t pt-4">
+                <!-- Total will be injected here by JS -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm mb-8">
+             <h3 class="text-2xl font-bold text-gray-800 mb-4">About the Campaign</h3>
+             <div class="flex flex-col md:flex-row gap-6 items-center">
+                <img src="https://source.unsplash.com/random/400x300/?planting,community" alt="Community planting trees" class="w-full md:w-1/3 h-auto rounded-lg object-cover">
+                <p class="text-gray-600 leading-relaxed">
+                    Our "Plant a Tree, Grow a Future" campaign is more than just an initiative; it's a movement towards a sustainable and vibrant planet. Every tree you purchase and plant contributes to restoring ecosystems, combating climate change, and creating a healthier environment for future generations. We partner with local communities to ensure that each tree is planted in an area where it can thrive and make the most impact. Join us today, and be a part of the change.
+                </p>
+             </div>
+        </section>
+
+        <!-- Our Impact Section -->
+        <section class="impact-section py-12 rounded-2xl mb-8">
+            <div class="container mx-auto text-center px-4">
+                <h3 class="text-3xl font-bold text-green-800 mb-8">Our Impact</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <p class="text-4xl lg:text-5xl font-bold text-green-600">500K+</p>
+                        <p class="text-gray-600 mt-2">Trees Planted</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <p class="text-4xl lg:text-5xl font-bold text-green-600">120+</p>
+                        <p class="text-gray-600 mt-2">Communities Involved</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <p class="text-4xl lg:text-5xl font-bold text-green-600">30+</p>
+                        <p class="text-gray-600 mt-2">Countries Reached</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plant a Tree Section -->
+        <section class="plant-tree-section py-12">
+            <div class="container mx-auto text-center px-4">
+                <h3 class="text-3xl font-bold text-white mb-8">Plant a Tree Today</h3>
+                <form class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg text-left">
+                    <div class="mb-4">
+                         <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email address" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="trees" class="block text-gray-700 font-medium mb-2">Number of Trees</label>
+                        <select id="trees" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white appearance-none">
+                            <option disabled selected>Select an option</option>
+                            <option value="1">1 Tree - ৳400</option>
+                            <option value="5">5 Trees - ৳2000</option>
+                            <option value="10">10 Trees - ৳4000</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-secondary w-full py-3 rounded-lg font-bold">Plant Now</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="header-green text-white py-8 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Green Earth. All Rights Reserved.</p>
+            <p class="mt-2 text-gray-300">Making the world greener, one tree at a time.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const plantData = [
+            { id: 1, name: 'Mango Tree', description: 'A fast-growing tropical tree that produces delicious, juicy mangoes during summer.', category: 'Fruit Tree', price: 500, imageQuery: 'mango tree' },
+            { id: 2, name: 'Guava Tree', description: 'A hardy fruit tree that grows in various climates, yielding guavas packed with Vitamin C.', category: 'Fruit Tree', price: 350, imageQuery: 'guava fruit on tree' },
+            { id: 3, name: 'Jackfruit Tree', description: 'Bears the world\'s biggest fruit, the jackfruit. Its sweet and aromatic flesh is a treat.', category: 'Fruit Tree', price: 800, imageQuery: 'jackfruit on tree' },
+            { id: 4, name: 'Passion Flower', description: 'An exotic and beautiful flowering vine with intricate, stunning blooms.', category: 'Flowering Tree', price: 500, imageQuery: 'passion flower' },
+            { id: 5, name: 'Water Lily', description: 'An elegant aquatic plant with floating leaves and beautiful, fragrant flowers.', category: 'Aquatic Plant', price: 300, imageQuery: 'water lily' },
+            { id: 6, name: 'Neem Tree', description: 'Known for its medicinal properties, this tree is a staple in traditional remedies.', category: 'Medicinal Tree', price: 250, imageQuery: 'neem tree' },
+            { id: 7, name: 'Bamboo Plant', description: 'A fast-growing and versatile plant, known for its rapid growth and many uses.', category: 'Bamboo', price: 250, imageQuery: 'bamboo plant' },
+            { id: 8, name: 'Flame Tree', description: 'A stunning ornamental tree that produces vibrant red-orange flowers.', category: 'Shade Tree', price: 750, imageQuery: 'flame tree flower' },
+        ];
+
+        let cart = [];
+
+        const productsContainer = document.getElementById('products');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalContainer = document.getElementById('cart-total');
+        const categoriesContainer = document.getElementById('categories');
+
+        // --- RENDER FUNCTIONS ---
+        
+        function renderProducts(productsToRender) {
+            productsContainer.innerHTML = '';
+            productsToRender.forEach(plant => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col';
+                // Using a more reliable, seeded image provider (picsum.photos)
+                card.innerHTML = `
+                    <img src="https://picsum.photos/seed/${encodeURIComponent(plant.name)}/500/400" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/500x400/f0fff4/22543d?text=Image+Not+Found';" 
+                         alt="${plant.name}" 
+                         class="w-full h-48 object-cover bg-gray-200">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-800">${plant.name}</h4>
+                        <p class="text-gray-600 text-sm mt-1 mb-4 flex-grow">${plant.description}</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="category-tag text-xs font-semibold px-3 py-1 rounded-full">${plant.category}</span>
+                            <span class="text-lg font-bold text-gray-800">৳${plant.price}</span>
+                        </div>
+                        <button class="btn-secondary w-full py-2 rounded-lg mt-auto transition duration-300 hover:bg-green-600" onclick="addToCart(${plant.id})">Add to Cart</button>
+                    </div>
+                `;
+                productsContainer.appendChild(card);
+            });
+        }
+
+        function renderCart() {
+            cartItemsContainer.innerHTML = '';
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
+                cartTotalContainer.innerHTML = '';
+                return;
+            }
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'flex justify-between items-center';
+                cartItem.innerHTML = `
+                    <div>
+                        <p class="font-semibold text-gray-700">${item.name}</p>
+                        <p class="text-gray-500 text-sm">৳${item.price}</p>
+                    </div>
+                    <button class="text-red-500 font-bold text-2xl" onclick="removeFromCart(${item.id})">&times;</button>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            cartTotalContainer.innerHTML = `Total: ৳${total}`;
+        }
+        
+        function renderCategories() {
+            const categories = ['All', ...new Set(plantData.map(p => p.category))];
+            categoriesContainer.innerHTML = '';
+            categories.forEach(category => {
+                const categoryLink = document.createElement('a');
+                categoryLink.href = '#';
+                categoryLink.innerText = category;
+                categoryLink.className = 'text-gray-700 hover:text-green-600 font-medium p-2 rounded-lg transition';
+                categoryLink.onclick = (e) => {
+                    e.preventDefault();
+                    // Deselect others, select this one
+                    document.querySelectorAll('#categories a').forEach(a => a.classList.remove('bg-green-100', 'text-green-800'));
+                    e.target.classList.add('bg-green-100', 'text-green-800');
+                    filterByCategory(category);
+                };
+                categoriesContainer.appendChild(categoryLink);
+            });
+            // Select 'All' by default
+            categoriesContainer.firstChild.classList.add('bg-green-100', 'text-green-800');
+        }
+
+
+        // --- CART LOGIC ---
+        
+        function addToCart(plantId) {
+            const plantToAdd = plantData.find(p => p.id === plantId);
+            if (plantToAdd) {
+                cart.push(plantToAdd);
+                renderCart();
+            }
+        }
+
+        function removeFromCart(plantId) {
+            const indexToRemove = cart.findIndex(p => p.id === plantId);
+            if(indexToRemove > -1) {
+                cart.splice(indexToRemove, 1);
+                renderCart();
+            }
+        }
+
+        // --- FILTERING ---
+        function filterByCategory(category) {
+            if (category === 'All') {
+                renderProducts(plantData);
+            } else {
+                const filtered = plantData.filter(p => p.category === category);
+                renderProducts(filtered);
+            }
+        }
+
+
+        // --- INITIAL LOAD ---
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(plantData);
+            renderCart();
+            renderCategories();
+        });
+
+    </script>
+</body>
+</html>
+
